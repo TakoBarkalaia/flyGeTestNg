@@ -1,0 +1,101 @@
+.dashedCircule{
+    content: '';
+        position: absolute;
+        bottom: -8px;
+        left: -8px;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background-color: #EAECEE;
+}
+
+.dashed {
+    position: absolute;
+    border: 1px dashed #C7C7C7;
+    height: 545px;
+    &::before{
+        @extend.dashedCircule;
+        top: -8px;
+    }
+    &::after{
+        @extend.dashedCircule;
+    }
+}
+
+.container {
+    width: 185px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .price {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 174px 0 35px 0;
+        .price__lari {
+            font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 40px;
+        
+        display: flex;
+        align-items: center;
+        text-align: center;
+        
+        color: #3C3F49;
+        }
+        
+        .price__installment {
+        font-family: 'Noto Sans Georgian';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 24px;
+        
+        color: #1A73E7;
+        }
+    } 
+    
+    .reservBtn {
+        button{
+            display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 53px;
+    gap: 10px;
+    background: #1A73E7;
+    border-radius: 5px;
+    
+    font-family: 'Noto Sans Georgian';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    text-decoration: none;
+    color: #FFFFFF;
+    border: none;
+        }
+    } 
+    
+    .showMoreBtn {
+       button{
+        font-family: 'Noto Sans Georgian';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12.5px;
+        line-height: 24px;
+        text-align: right;
+        color: #616C81;
+        background-color: #fff;
+        border: 1px solid #C8D2DC;
+        border-radius: 4px;
+        padding: 4px 28px;
+        margin-top: 154px;
+       }
+    
+    }
+}
+
